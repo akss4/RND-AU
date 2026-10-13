@@ -1,0 +1,19 @@
+.banksSection {
+  margin-top: -10rem; /* Pull section up to reduce space with About section */
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  background-color: var(--base-200);
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+}
+
+/* Optional: Add some top/bottom margin to separate from surrounding sections */
+@media (min-width: 769px) {
+  .banksSection {
+    margin-top: -20rem; /* Increased pull on desktop */
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+}

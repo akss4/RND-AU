@@ -1,0 +1,137 @@
+.researchOutcomes {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  background-color: var(--base-200);
+  color: var(--base-500);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 6rem;
+  row-gap: 3rem;
+  width: 100%;
+  min-height: 100svh;
+  padding-block: 12rem;
+  align-items: start;
+}
+
+.logoWrapper {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.title {
+  grid-column: 2;
+  grid-row: 1;
+  max-width: 6em;
+}
+
+.leftCol {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.copy {
+  max-width: 18em;
+}
+
+.imageCard {
+  position: relative;
+  width: 100%;
+  max-width: 42rem;
+  padding: 0.75rem;
+  background-color: var(--base-100);
+  opacity: 0;
+  transform: translateY(300px);
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--base-200);
+}
+
+.list {
+  grid-column: 2;
+  grid-row: 2;
+  list-style: none;
+  border-top: 1px dashed var(--base-200);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1.15rem;
+  border-bottom: 1px dashed var(--base-200);
+}
+
+.check {
+  flex-shrink: 0;
+  display: flex;
+  color: var(--base-300);
+  transform-origin: center;
+  transform: scale(0);
+}
+
+@media (max-width: 768px) {
+  .researchOutcomes,
+  .inner {
+    min-height: 0;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    row-gap: 2rem;
+  }
+
+  :global(.container).inner {
+    padding-block: 8rem;
+  }
+
+  .logoWrapper,
+  .title,
+  .leftCol,
+  .list {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .logo {
+    max-width: 11rem;
+  }
+
+  .title {
+    padding-top: 1.5rem;
+  }
+
+  .copy {
+    max-width: none;
+  }
+
+  .leftCol {
+    gap: 2.5rem;
+  }
+
+  .imageCard {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,106 @@
+.researchStatement {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  background-color: var(--base-200);
+  color: var(--base-500);
+}
+
+.inner {
+  display: flex;
+  width: 100%;
+  min-height: 100svh;
+  padding-block: 12rem;
+}
+
+.cols {
+  display: grid;
+  flex: 1;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem 6rem;
+  align-items: start;
+}
+
+.mainCol {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.statement {
+  max-width: 16em;
+}
+
+.imageCard {
+  position: relative;
+  width: 100%;
+  max-width: 42rem;
+  padding: 0.75rem;
+  background-color: var(--base-100);
+  opacity: 0;
+  transform: translateY(300px);
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--base-200);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+.copy {
+  max-width: 22em;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .researchStatement,
+  .inner {
+    min-height: 0;
+  }
+
+  .inner {
+    padding-block: 8rem;
+  }
+
+  .cols {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .mainCol {
+    gap: 2.5rem;
+  }
+
+  .imageCard {
+    max-width: 100%;
+  }
+
+  .statement,
+  .copy {
+    max-width: none;
+  }
+
+  .aside {
+    gap: 3rem;
+  }
+}
