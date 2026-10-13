@@ -16,8 +16,8 @@ gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 
 const LINKS = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
   { href: "/work", label: "Work" },
-  { href: "/research", label: "Research Areas" },
   { href: "/firm", label: "Inside the Firm" },
   { href: "/partnerships", label: "Partnerships" },
   { href: "/journal", label: "Journal" },
