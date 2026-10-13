@@ -21,7 +21,6 @@ const ITEMS = [
       "From initial borrowing capacity calculation to final loan settlement, we manage the entire process on your behalf.",
     ],
   },
-
   {
     question: "Are your mortgage broking services free?",
     answer: [
@@ -30,7 +29,6 @@ const ITEMS = [
       "Our duty is to act in your best interests under Best Interests Duty (BID), ensuring you get the most suitable loan solution.",
     ],
   },
-
   {
     question: "What does a loan application process look like?",
     answer: [
@@ -39,7 +37,6 @@ const ITEMS = [
       "We liaise directly with the bank's assessors to secure your pre-approval, formal approval, and final settlement smoothly.",
     ],
   },
-
   {
     question: "How do we start working with RND Financials?",
     answer: [
@@ -128,7 +125,7 @@ export default function FAQ() {
           );
 
         ScrollTrigger.create({
-          trigger: message,
+          trigger: row,
           start: "top 85%",
           onEnter: () => {
             collapseWhenDone = false;
@@ -144,12 +141,18 @@ export default function FAQ() {
         });
 
         ScrollTrigger.create({
-          trigger: message,
+          trigger: row,
           start: "top 75%",
           onEnter: () => expandTimeline.play(),
           onLeaveBack: () => expandTimeline.reverse(),
         });
       });
+
+      if (typeof document !== "undefined" && document.fonts) {
+        document.fonts.ready.then(() => {
+          ScrollTrigger.refresh();
+        });
+      }
     },
     { scope: rootRef },
   );
@@ -168,19 +171,33 @@ export default function FAQ() {
         </div>
 
         <div className={styles.list}>
-          {ITEMS.map((item, index) => (
-            <div key={index} className={styles.row}>
-              <div className={styles.message}>
-                <div className={styles.typing}>
-                  <div className={styles.typingDot} />
-                  <div className={styles.typingDot} />
-                  <div className={styles.typingDot} />
+          {ITEMS.map((item) => (
+            <div key={item.question} className={styles.item}>
+              <div className={`${styles.row} ${styles.questionSlot}`}>
+                <div className={`${styles.message} ${styles.question}`}>
+                  <div className={styles.typing} aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className={styles.content}>
+                    <p>{item.question}</p>
+                  </div>
                 </div>
-                <div className={styles.content}>
-                  <p className="mono sm">{item.question}</p>
-                  {item.answer.map((paragraph, pIndex) => (
-                    <p key={pIndex}>{paragraph}</p>
-                  ))}
+              </div>
+
+              <div className={`${styles.row} ${styles.answerSlot}`}>
+                <div className={`${styles.message} ${styles.answer}`}>
+                  <div className={styles.typing} aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className={styles.content}>
+                    {item.answer.map((line) => (
+                      <p key={line}>{line}</p>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
