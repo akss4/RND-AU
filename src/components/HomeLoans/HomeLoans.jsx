@@ -63,6 +63,11 @@ export default function HomeLoans() {
 
       {/* SECTION 2: PRODUCTS OVERVIEW (QUICK JUMP CARDS) */}
       <section className={styles.overviewSection}>
+        <div className={styles.overviewBg} aria-hidden="true">
+          <img src="/images/home/statement.jpg" alt="" />
+          <div className={styles.overviewOverlay} />
+        </div>
+
         <Copy variant="flicker">
           <SectionHeader
             bullet
@@ -71,7 +76,7 @@ export default function HomeLoans() {
           />
         </Copy>
 
-        <div className="container">
+        <div className={`container ${styles.overviewContent}`}>
           <div className={styles.overviewHeader}>
             <Copy>
               <h2 className={styles.overviewTitle}>
