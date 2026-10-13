@@ -147,11 +147,10 @@ export default function Menu() {
           const label = item.querySelector(`.${styles.label}`);
           if (!label) return;
 
-          const line =
-            label.querySelector("div > div") ||
-            label.querySelector("div") ||
-            label;
-          const wordSplit = new SplitText(line, {
+          const lineEls = label.querySelectorAll("div > div");
+          const targets = lineEls.length > 0 ? Array.from(lineEls) : [label];
+
+          const wordSplit = new SplitText(targets, {
             type: "words",
             mask: "words",
             wordsClass: styles.word,
@@ -164,15 +163,19 @@ export default function Menu() {
 
           const applyShift = () => {
             words.forEach((word) => {
-              word.style.setProperty("--shift", `${word.offsetHeight}px`);
+              const h = word.offsetHeight;
+              if (h > 0) {
+                word.style.setProperty("--shift", `${h}px`);
+              }
             });
           };
           applyShift();
           document.fonts?.ready.then(applyShift);
 
           const play = (enter) => {
+            applyShift();
             gsap.to(words, {
-              y: (_index, word) => (enter ? word.offsetHeight : 0),
+              y: (_index, word) => (enter ? (word.offsetHeight || 32) : 0),
               duration: HOVER_DURATION,
               ease: "power1.inOut",
               stagger: HOVER_STAGGER,

@@ -170,11 +170,13 @@
 
 .label {
   margin: 0;
-  font-size: 1.7rem;
+  font-size: clamp(1.4rem, 2.2vw, 1.7rem);
   color: var(--base-500);
+  white-space: nowrap;
 }
 
 .word {
+  display: inline-block;
   line-height: inherit;
   text-shadow: 0 calc(-1 * var(--shift, 1.2em)) 0 currentColor;
   -webkit-backface-visibility: hidden;
