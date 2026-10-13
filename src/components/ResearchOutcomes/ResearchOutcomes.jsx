@@ -25,7 +25,7 @@ const OUTCOMES = [
 ];
 
 export default function ResearchOutcomes({
-  image = "/images/journal/article-2.jpg",
+  image = "/images/loans/article-2.jpg",
   alt = "Why choose RND Financials",
 }) {
   const sectionRef = useRef(null);

@@ -33,7 +33,7 @@ export const BUSINESS_LOAN_PRODUCTS = [
     slug: "unsecured-business-loans",
     index: "02",
     icon: "ChartIcon",
-    image: "/images/journal/article-2.jpg",
+    image: "/images/loans/article-2.jpg",
     summary:
       "Unsecured business loans may provide eligible businesses with access to funding without requiring a specific property or asset to be pledged as security, suited for stock purchases, cash flow, and operational expenditure.",
     paragraphs: [
@@ -51,7 +51,7 @@ export const BUSINESS_LOAN_PRODUCTS = [
     slug: "small-business-loans",
     index: "03",
     icon: "SlidersIcon",
-    image: "/images/journal/article-3.jpg",
+    image: "/images/loans/article-3.jpg",
     summary:
       "Small business loans provide funding options for sole traders, partnerships, and companies seeking finance for daily operations, equipment purchases, inventory, and growth.",
     paragraphs: [

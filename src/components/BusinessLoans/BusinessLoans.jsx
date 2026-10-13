@@ -87,7 +87,7 @@ export default function BusinessLoans() {
       {/* SECTION 2: PRODUCTS OVERVIEW (QUICK JUMP CARDS) */}
       <section className={styles.overviewSection}>
         <div className={styles.overviewBg} aria-hidden="true">
-          <img src="/images/partnerships/banner.jpg" alt="" />
+          <img src="/images/loans/business-banner.jpg" alt="" />
         </div>
 
         <Copy variant="flicker">

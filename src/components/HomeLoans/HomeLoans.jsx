@@ -186,7 +186,7 @@ export default function HomeLoans() {
               <div className={styles.imageCard}>
                 <div className={styles.image}>
                   <img
-                    src={prod.image || "/images/journal/article-1.jpg"}
+                    src={prod.image || "/images/loans/article-1.jpg"}
                     alt={prod.name}
                   />
                 </div>

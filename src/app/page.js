@@ -161,7 +161,7 @@ export default function Home() {
             </Button>
             <Button
               variant="secondary"
-              href="/firm"
+              href="/about"
               className={styles.ctaSecondary}
             >
               About RND

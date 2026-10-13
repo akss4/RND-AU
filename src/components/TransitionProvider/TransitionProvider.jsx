@@ -25,9 +25,6 @@ const PAGE_LABELS = {
   "/business-loans": "Business Loans",
   "/about": "About Us",
   "/research": "Loan Solutions",
-  "/firm": "Inside the Firm",
-  "/partnerships": "Partnerships",
-  "/journal": "Resources",
   "/contact": "Let's Talk",
 };
 

@@ -20,7 +20,7 @@ const STATS = [
 ];
 
 export default function ResearchStatement({
-  image = "/images/journal/article-1.jpg",
+  image = "/images/loans/article-1.jpg",
   alt = "Finance advisory and lending options",
 }) {
   const sectionRef = useRef(null);
