@@ -1,0 +1,300 @@
+.pageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Quick Hero CTA row below PageHeader */
+.heroCtaSection {
+  background-color: var(--base-200);
+  padding-bottom: 4rem;
+  border-bottom: 1px dashed var(--base-300);
+}
+
+.heroCtaInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.heroCtaText {
+  max-width: 38rem;
+  color: var(--base-400);
+}
+
+.heroCtaButton {
+  flex-shrink: 0;
+}
+
+/* Section 2: Products Overview Grid */
+.overviewSection {
+  position: relative;
+  width: 100%;
+  padding-block: 6rem 8rem;
+  background-color: var(--base-100);
+  color: var(--base-500);
+  border-bottom: 1px solid var(--base-200);
+}
+
+.overviewHeader {
+  margin-bottom: 4rem;
+}
+
+.overviewTitle {
+  font-size: clamp(32px, 0.04 * calc(100 * var(--vw, 1vw)), 56px);
+  max-width: 18em;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.overviewCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.25rem 2rem;
+  background-color: var(--base-200);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease;
+  min-height: 320px;
+}
+
+.overviewCard:hover {
+  transform: translateY(-4px);
+  background-color: var(--base-100);
+  border-color: var(--base-300);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.cardIndex {
+  color: var(--base-300);
+}
+
+.cardIcon {
+  color: var(--base-accent);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--base-500);
+}
+
+.cardSummary {
+  color: var(--base-400);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.cardAction {
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--base-500);
+  text-decoration: none;
+  font-family: var(--font-google-sans-code), monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.overviewCard:hover .cardAction {
+  color: var(--base-accent);
+  gap: 0.85rem;
+}
+
+/* Section 3: Detailed Product Sections */
+.detailSection {
+  position: relative;
+  width: 100%;
+  padding-block: 8rem;
+  scroll-margin-top: 4rem;
+}
+
+.detailSection:nth-of-type(odd) {
+  background-color: var(--base-200);
+}
+
+.detailSection:nth-of-type(even) {
+  background-color: var(--base-100);
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 4rem 6rem;
+  align-items: start;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.detailSidebar {
+  position: sticky;
+  top: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.detailHeadingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detailIndex {
+  color: var(--base-accent);
+}
+
+.detailTitle {
+  font-size: clamp(32px, 0.038 * calc(100 * var(--vw, 1vw)), 54px);
+  line-height: 1.1;
+  color: var(--base-500);
+}
+
+.detailCta {
+  margin-top: 1rem;
+}
+
+.detailContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.paragraphGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.paragraphGroup p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--base-400);
+}
+
+.paragraphGroup p:first-child {
+  color: var(--base-500);
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Risk / Qualification Callout Box */
+.warningBox {
+  position: relative;
+  margin-top: 1.5rem;
+  padding: 1.75rem 2rem;
+  background-color: rgba(193, 160, 91, 0.08);
+  border-left: 3px solid var(--base-accent);
+  border-radius: 0;
+}
+
+.warningHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--base-accent);
+}
+
+.warningBullet {
+  width: 0.45rem;
+  height: 0.45rem;
+  background-color: var(--base-accent);
+  display: inline-block;
+}
+
+.warningText {
+  color: var(--base-500);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* Section 4: Final Banner CTA */
+.finalCtaSection {
+  position: relative;
+  background-color: var(--base-500);
+  color: var(--base-100);
+  padding-block: 8rem;
+  overflow: hidden;
+}
+
+.finalCtaInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.finalCtaTitle {
+  color: var(--base-100);
+  font-size: clamp(36px, 0.045 * calc(100 * var(--vw, 1vw)), 68px);
+}
+
+.finalCtaText {
+  color: var(--base-300);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.finalCtaButtonWrap {
+  margin-top: 1rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 960px) {
+  .detailGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .detailSidebar {
+    position: static;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroCtaSection {
+    padding-bottom: 3rem;
+  }
+
+  .overviewSection {
+    padding-block: 4rem 5rem;
+  }
+
+  .detailSection {
+    padding-block: 5rem;
+  }
+
+  .warningBox {
+    padding: 1.25rem 1.5rem;
+  }
+}

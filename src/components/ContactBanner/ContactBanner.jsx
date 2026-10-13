@@ -2,7 +2,7 @@
 
 import styles from "./ContactBanner.module.css";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -32,6 +32,16 @@ export default function ContactBanner({
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const serviceParam = params.get('service');
+      if (serviceParam) {
+        setFormData((prev) => ({ ...prev, service: serviceParam }));
+      }
+    }
+  }, []);
 
   useGSAP(
     () => {

@@ -20,6 +20,7 @@ if (typeof window !== "undefined") {
 
 const PAGE_LABELS = {
   "/": "Home",
+  "/home-loans": "Home Loans",
   "/about": "About Us",
   "/work": "Work",
   "/research": "Loan Solutions",

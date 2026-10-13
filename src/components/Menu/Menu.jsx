@@ -23,6 +23,7 @@ gsap.registerPlugin(useGSAP, SplitText);
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
+  { href: "/home-loans", label: "Home Loans" },
   { href: "/about", label: "About Us" },
   { href: "/work", label: "Work" },
   { href: "/firm", label: "Inside the Firm" },

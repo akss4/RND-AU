@@ -16,6 +16,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 
 const LINKS = [
   { href: "/", label: "Home" },
+  { href: "/home-loans", label: "Home Loans" },
   { href: "/about", label: "About Us" },
   { href: "/work", label: "Work" },
   { href: "/firm", label: "Inside the Firm" },
