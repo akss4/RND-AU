@@ -93,10 +93,10 @@ export default function ResearchOutcomes({
         </div>
 
         <Copy>
-          <h2 className={styles.title}>
+          <h2 className={styles.title} data-copy-text="true">
             Why choose
             <br />
-            RND
+            <span className={styles.accent}>RND</span>
           </h2>
         </Copy>
 

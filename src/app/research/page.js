@@ -15,7 +15,7 @@ export default function ResearchPage() {
         title="Loan"
         subtitle="Solutions"
         description="Home loans, refinancing, asset finance, business funding, and more—tailored to your financial goals."
-        icon="TensorIcon"
+        icon="ChartIcon"
       />
 
       <StatementBanner

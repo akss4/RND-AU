@@ -20,13 +20,27 @@ if (typeof window !== "undefined") {
 
 const PAGE_LABELS = {
   "/": "Home",
+  "/about": "About Us",
   "/work": "Work",
-  "/research": "Research Areas",
+  "/research": "Loan Solutions",
   "/firm": "Inside the Firm",
   "/partnerships": "Partnerships",
-  "/journal": "Journal",
+  "/journal": "Resources",
   "/contact": "Let's Talk",
 };
+
+function resolvePageLabel(path) {
+  if (!path) return "Home";
+  const clean = path.replace(/\/+$/, "") || "/";
+  if (PAGE_LABELS[clean]) return PAGE_LABELS[clean];
+  if (PAGE_LABELS[path]) return PAGE_LABELS[path];
+  const segment = clean.split("/").filter(Boolean).pop();
+  if (!segment) return "Home";
+  return segment
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
 
 const OPEN = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
 const CLOSED = "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)";
@@ -85,7 +99,7 @@ export default function TransitionProvider({ children }) {
         timelineRef.current?.kill();
         revertSplit();
 
-        title.textContent = PAGE_LABELS[to] ?? "Home";
+        title.textContent = resolvePageLabel(to);
         splitRef.current = new SplitText(title, {
           type: "words",
           mask: "words",

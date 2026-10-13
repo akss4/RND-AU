@@ -15,7 +15,7 @@ export default function AboutPage() {
         title="About"
         subtitle="Us"
         description="Learn about our story, values, and commitment to helping Australians achieve their financial goals."
-        icon="TensorIcon"
+        icon="HomeIcon"
       />
 
       <StatementBanner

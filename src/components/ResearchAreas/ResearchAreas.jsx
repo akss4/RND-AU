@@ -7,10 +7,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import {
-  CpuIcon,
-  FlaskIcon,
-  NetworkIcon,
-  TensorIcon,
+  HomeIcon,
+  SlidersIcon,
+  GaugeIcon,
+  ChartIcon,
 } from "@unlocalhosted/dither-icons";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -21,28 +21,28 @@ const CARDS = [
     label: "Home Loans",
     description:
       "Whether you're buying your first home or upgrading, we compare hundreds of home loan products to find competitive rates and features that fit your budget.",
-    Icon: CpuIcon,
+    Icon: HomeIcon,
   },
   {
     title: "Refinancing & Investment Property",
     label: "Refinancing",
     description:
       "Lower your rate, unlock equity, or build your property portfolio. We help you refinance smarter and structure investment loans that grow your wealth.",
-    Icon: NetworkIcon,
+    Icon: SlidersIcon,
   },
   {
     title: "Asset Finance & Vehicle Loans",
     label: "Asset Finance",
     description:
       "From cars to commercial equipment, we secure asset finance and vehicle loans with flexible terms, helping you acquire what you need without upfront strain.",
-    Icon: TensorIcon,
+    Icon: GaugeIcon,
   },
   {
     title: "Business Loans & Commercial Finance",
     label: "Business Loans",
     description:
       "Fuel your business growth with tailored business loans, commercial property finance, and working capital solutions designed for Australian entrepreneurs.",
-    Icon: FlaskIcon,
+    Icon: ChartIcon,
   },
 ];
 
