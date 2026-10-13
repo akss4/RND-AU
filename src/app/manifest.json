@@ -1,6 +1,8 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "RND Financials",
+  "short_name": "RND Financials",
+  "description": "Australian mortgage brokerage helping you secure the right home loan.",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

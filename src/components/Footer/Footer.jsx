@@ -222,9 +222,9 @@ export default function Footer() {
             ))}
           </nav>
           <p className={styles.footerCopy}>
-            An independent lab working on machine intelligence, building systems
-            that reason under real conditions and proving they hold up long
-            after the demo is over.
+            A premier Melbourne mortgage brokerage dedicated to securing the
+            ideal home loans, refinancing structures, and commercial lending
+            solutions for Australian borrowers.
           </p>
         </div>
         <div className={styles.footerHeader}>
