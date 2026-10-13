@@ -5,7 +5,7 @@ export const HOME_LOANS_CATEGORY = {
   subtitle: "Loans",
   slug: "home-loans",
   description:
-    "At RND Financials, we assist eligible Australian borrowers in exploring residential financing options—whether purchasing your first home, securing an investment property, building, or reviewing an existing mortgage.",
+    "Residential finance tailored to your goals—whether purchasing your first home, investing in property, building, or refinancing an existing mortgage.",
   icon: "HomeIcon",
 };
 

@@ -1,6 +1,7 @@
 .pageHeader {
   width: 100%;
-  height: 65svh;
+  min-height: 65svh;
+  height: auto;
   background-color: var(--base-300);
   color: var(--base-100);
 }
@@ -13,8 +14,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  min-height: 65svh;
   padding-top: calc(132px + 2rem);
+  padding-bottom: 3.5rem;
+  box-sizing: border-box;
 }
 
 .heading {
@@ -31,7 +34,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 
 .scrollBtn {
@@ -60,25 +64,32 @@
 
 .copy {
   flex-shrink: 0;
-  max-width: 20rem;
+  max-width: min(34rem, 50vw);
   text-align: right;
-  font-size: clamp(16px, 0.02 * calc(100 * var(--vw, 1vw)), 36px);
+  font-size: clamp(16px, 0.018 * calc(100 * var(--vw, 1vw)), 30px);
+  line-height: 1.35;
 }
 
 @media (max-width: 768px) {
   .pageHeader {
-    height: 75svh;
+    min-height: 75svh;
+  }
+
+  .inner {
+    min-height: 75svh;
+    padding-bottom: 2rem;
   }
 
   .meta {
     align-items: flex-start;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     padding-bottom: 2rem;
   }
 
   .copy {
     max-width: none;
     text-align: left;
+    font-size: clamp(16px, 0.02 * calc(100 * var(--vw, 1vw)), 24px);
   }
 }

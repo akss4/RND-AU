@@ -6,7 +6,7 @@
 /* Quick Hero CTA row below PageHeader */
 .heroCtaSection {
   background-color: var(--base-200);
-  padding-bottom: 4rem;
+  padding-block: 3.5rem;
   border-bottom: 1px dashed var(--base-300);
 }
 
@@ -283,7 +283,7 @@
 
 @media (max-width: 640px) {
   .heroCtaSection {
-    padding-bottom: 3rem;
+    padding-block: 2.5rem;
   }
 
   .overviewSection {
