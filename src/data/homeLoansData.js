@@ -15,6 +15,7 @@ export const HOME_LOAN_PRODUCTS = [
     "slug": "first-home-buyer-loans",
     "index": "01",
     "icon": "HomeIcon",
+    "image": "/images/journal/article-1.jpg",
     "summary": "Purchasing your first home is a significant financial milestone. Understanding deposit requirements, borrowing capacity, loan repayments and the home buying process can help you make informed decisions before committing to a property purchase.",
     "paragraphs": [
       "Purchasing your first home is a significant financial milestone. Understanding deposit requirements, borrowing capacity, loan repayments and the home buying process can help you make informed decisions before committing to a property purchase.",
@@ -28,6 +29,7 @@ export const HOME_LOAN_PRODUCTS = [
     "slug": "investment-property-loans",
     "index": "02",
     "icon": "ChartIcon",
+    "image": "/images/journal/article-2.jpg",
     "summary": "Purchasing an investment property involves more than selecting the right location. It is important to understand borrowing costs, rental income, ongoing property expenses, interest rate movements and how the loan fits within your overall financial circumstances.",
     "paragraphs": [
       "Purchasing an investment property involves more than selecting the right location. It is important to understand borrowing costs, rental income, ongoing property expenses, interest rate movements and how the loan fits within your overall financial circumstances.",
@@ -42,6 +44,7 @@ export const HOME_LOAN_PRODUCTS = [
     "slug": "home-loan-refinancing",
     "index": "03",
     "icon": "SlidersIcon",
+    "image": "/images/journal/article-3.jpg",
     "summary": "Your existing home loan may not always remain suitable as interest rates, lender products and your personal circumstances change. Reviewing your mortgage can help determine whether its current features and repayment structure continue to meet your financial needs.",
     "paragraphs": [
       "Your existing home loan may not always remain suitable as interest rates, lender products and your personal circumstances change. Reviewing your mortgage can help determine whether its current features and repayment structure continue to meet your financial needs.",
@@ -56,6 +59,7 @@ export const HOME_LOAN_PRODUCTS = [
     "slug": "construction-loans",
     "index": "04",
     "icon": "LayersIcon",
+    "image": "/images/journal/article-4.jpg",
     "summary": "Building a new home requires careful financial planning, particularly when construction costs are paid progressively throughout the building process.",
     "paragraphs": [
       "Building a new home requires careful financial planning, particularly when construction costs are paid progressively throughout the building process.",
@@ -71,6 +75,7 @@ export const HOME_LOAN_PRODUCTS = [
     "slug": "bridging-loans",
     "index": "05",
     "icon": "OrbitIcon",
+    "image": "/images/journal/article-5.jpg",
     "summary": "Purchasing a new property before selling your existing home can create a temporary period where you may need to manage financing commitments associated with both properties.",
     "paragraphs": [
       "Purchasing a new property before selling your existing home can create a temporary period where you may need to manage financing commitments associated with both properties.",
@@ -86,6 +91,7 @@ export const HOME_LOAN_PRODUCTS = [
     "slug": "land-loans",
     "index": "06",
     "icon": "WorkspaceIcon",
+    "image": "/images/research/banner.jpg",
     "summary": "Purchasing vacant land can be an important step towards building a future home or acquiring residential property for an eligible investment purpose.",
     "paragraphs": [
       "Purchasing vacant land can be an important step towards building a future home or acquiring residential property for an eligible investment purpose.",
@@ -101,6 +107,7 @@ export const HOME_LOAN_PRODUCTS = [
     "slug": "house-and-land-package-loans",
     "index": "07",
     "icon": "TargetIcon",
+    "image": "/images/about/banner.jpg",
     "summary": "House and land packages provide an option for eligible buyers who wish to purchase land and construct a new home as part of a planned property development.",
     "paragraphs": [
       "House and land packages provide an option for eligible buyers who wish to purchase land and construct a new home as part of a planned property development.",

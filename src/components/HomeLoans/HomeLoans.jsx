@@ -2,6 +2,10 @@
 
 import styles from "./HomeLoans.module.css";
 
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import { FiArrowDown } from "react-icons/fi";
 import {
   HomeIcon,
@@ -22,6 +26,8 @@ import {
   HOME_LOAN_PRODUCTS,
 } from "@/data/homeLoansData";
 
+gsap.registerPlugin(ScrollTrigger, useGSAP);
+
 const ICONS = {
   HomeIcon,
   ChartIcon,
@@ -33,8 +39,32 @@ const ICONS = {
 };
 
 export default function HomeLoans() {
+  const pageRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const cards = gsap.utils.toArray(`.${styles.imageCard}`);
+      cards.forEach((card) => {
+        gsap.set(card, { y: 60, opacity: 0 });
+        gsap.to(card, {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          clearProps: "transform",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        });
+      });
+    },
+    { scope: pageRef, dependencies: [] }
+  );
+
   return (
-    <div className={styles.pageWrapper}>
+    <div ref={pageRef} className={styles.pageWrapper}>
       {/* SECTION 1: HERO */}
       <PageHeader
         title={HOME_LOANS_CATEGORY.title}
@@ -150,6 +180,16 @@ export default function HomeLoans() {
                 >
                   Enquire About This Loan
                 </Button>
+              </div>
+
+              {/* Negative Space Fill Image Card */}
+              <div className={styles.imageCard}>
+                <div className={styles.image}>
+                  <img
+                    src={prod.image || "/images/journal/article-1.jpg"}
+                    alt={prod.name}
+                  />
+                </div>
               </div>
             </aside>
 
