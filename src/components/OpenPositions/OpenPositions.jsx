@@ -17,44 +17,44 @@ const ROW_STAGGER = 0.06;
 
 const ROLES = [
   {
-    title: "Research scientist, reasoning",
-    tag: "Models",
-    location: "Edinburgh",
+    title: "Senior Mortgage Broker",
+    tag: "Lending",
+    location: "Melbourne",
   },
   {
-    title: "Research engineer",
-    tag: "Models",
+    title: "Loan Processing Specialist",
+    tag: "Lending",
     location: "Remote",
   },
   {
-    title: "Infrastructure engineer",
-    tag: "Systems",
-    location: "Edinburgh",
+    title: "Client Relationship Manager",
+    tag: "Operations",
+    location: "Melbourne",
   },
   {
-    title: "ML systems engineer",
-    tag: "Systems",
+    title: "Asset & Commercial Finance Broker",
+    tag: "Operations",
     location: "Hybrid",
   },
   {
-    title: "Evaluation lead",
-    tag: "Alignment",
-    location: "Edinburgh",
+    title: "Credit & Compliance Analyst",
+    tag: "Client Care",
+    location: "Melbourne",
   },
   {
-    title: "Alignment researcher",
-    tag: "Alignment",
+    title: "First Home Buyer Specialist",
+    tag: "Client Care",
     location: "Remote",
   },
   {
-    title: "Data engineer",
-    tag: "Systems",
+    title: "Settlements Coordinator",
+    tag: "Operations",
     location: "Remote",
   },
   {
-    title: "Research resident",
-    tag: "Models",
-    location: "Edinburgh",
+    title: "Broker Support Associate",
+    tag: "Lending",
+    location: "Melbourne",
   },
 ];
 

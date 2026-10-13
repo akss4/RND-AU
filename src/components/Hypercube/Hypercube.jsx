@@ -198,10 +198,10 @@ class HypercubeScene {
       depthWrite: false,
     });
 
-    this.tesseract = new THREE.Points(geo, this.mat);
+    this.hypercubeMesh = new THREE.Points(geo, this.mat);
 
-    this.tesseract.rotation.x = this.angleX;
-    this.scene.add(this.tesseract);
+    this.hypercubeMesh.rotation.x = this.angleX;
+    this.scene.add(this.hypercubeMesh);
     this.updateScale();
 
     window.addEventListener("resize", this.onResizeBound);
@@ -246,7 +246,7 @@ class HypercubeScene {
     const dt = Math.min(0.05, (time - this.lastFrameTime) / 1e3);
     this.lastFrameTime = time;
 
-    if (this.tesseract) {
+    if (this.hypercubeMesh) {
       const msToSeconds = this.duration / 1e3;
       const baseVelocity = (Math.PI * 2) / msToSeconds;
 
@@ -254,8 +254,8 @@ class HypercubeScene {
       this.angleX += this.spinBoostX * dt;
       this.angleY %= Math.PI * 2;
       this.angleX %= Math.PI * 2;
-      this.tesseract.rotation.y = this.angleY;
-      this.tesseract.rotation.x = this.angleX;
+      this.hypercubeMesh.rotation.y = this.angleY;
+      this.hypercubeMesh.rotation.x = this.angleX;
 
       const decay = Math.exp(-dt * 3.5);
       this.spinBoostY *= decay;
@@ -270,11 +270,11 @@ class HypercubeScene {
   }
 
   updateScale() {
-    if (!this.tesseract) return;
+    if (!this.hypercubeMesh) return;
 
     const minDim = Math.min(innerWidth, innerHeight);
     const scale = Math.max(0.5, Math.min(1, minDim / 800));
-    this.tesseract.scale.setScalar(scale);
+    this.hypercubeMesh.scale.setScalar(scale);
   }
 
   onResize() {
@@ -311,9 +311,9 @@ class HypercubeScene {
     window.removeEventListener("resize", this.onResizeBound);
     window.removeEventListener("pointermove", this.onPointerMoveBound);
 
-    if (this.tesseract) {
-      this.scene.remove(this.tesseract);
-      this.tesseract.geometry.dispose();
+    if (this.hypercubeMesh) {
+      this.scene.remove(this.hypercubeMesh);
+      this.hypercubeMesh.geometry.dispose();
     }
     this.mat?.dispose();
     this.renderer.dispose();

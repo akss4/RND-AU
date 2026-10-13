@@ -14,38 +14,38 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const ITEMS = [
   {
-    question: "What does Tessera Lab work on?",
+    question: "What does RND Financials do?",
     answer: [
-      "We work across data, machine learning, and applied AI, with a focus on problems that require more than an off-the-shelf solution.",
-      "That can mean developing new models, investigating unfamiliar datasets, building intelligent systems, or testing a research idea in a real environment.",
-      "We are interested in difficult questions where the answer is not obvious at the outset.",
+      "We are an Australian mortgage brokerage based in Melbourne, helping you navigate home loans, refinancing, asset finance, and commercial lending.",
+      "We compare hundreds of loan products across major banks and specialist lenders to find the right rate and structure tailored to your goals.",
+      "From initial borrowing capacity calculation to final loan settlement, we manage the entire process on your behalf.",
     ],
   },
 
   {
-    question: "Do you work with proprietary or private data?",
+    question: "Are your mortgage broking services free?",
     answer: [
-      "Yes. We work with both public datasets and private data provided by research or industry partners.",
-      "The approach depends on the problem, the data available, and the constraints around how it can be used.",
-      "Data access, governance, privacy, and security are considered as part of the research from the beginning.",
+      "Yes. For standard residential home loans and refinancing, our broking service is free to you as a borrower.",
+      "We are paid a commission by the lender upon settlement of your loan. We disclose all lender fees and commission structures with complete transparency upfront.",
+      "Our duty is to act in your best interests under Best Interests Duty (BID), ensuring you get the most suitable loan solution.",
     ],
   },
 
   {
-    question: "What does a research engagement look like?",
+    question: "What does a loan application process look like?",
     answer: [
-      "We start with a question and define what would make an investigation useful.",
-      "From there, we move through data, experimentation, modelling, and evaluation, adapting the approach as we learn more.",
-      "The outcome might be a validated model, a working prototype, a new method, or evidence that a particular direction is not worth pursuing.",
+      "We begin with a free consultation to understand your financial position, borrowing capacity, and property aspirations.",
+      "Next, we shortlist suitable loan options from over 100+ Australian lenders and submit your application with all required documentation.",
+      "We liaise directly with the bank's assessors to secure your pre-approval, formal approval, and final settlement smoothly.",
     ],
   },
 
   {
-    question: "How do we start working with Tessera?",
+    question: "How do we start working with RND Financials?",
     answer: [
-      "Bring us a problem, a research question, or a system you want to understand better.",
-      "A clear objective is useful, but a finished specification is not required. We can help define the scope and identify what should be tested first.",
-      "If there is a meaningful question to investigate, we can start there.",
+      "Simply reach out to us via our contact form or book a free discovery call.",
+      "You don't need all your paperwork ready for the first chat — we will guide you on exactly what documents are needed.",
+      "Whether you are a first home buyer, upgrading, investing, or refinancing, we are ready to assist you.",
     ],
   },
 ];
@@ -157,7 +157,7 @@ export default function FAQ() {
   return (
     <section className={styles.faq} ref={rootRef}>
       <Copy variant="flicker">
-        <SectionHeader bullet left="FAQ / 01" right="Lab Notes" />
+        <SectionHeader bullet left="FAQ / 01" right="Client Guidance" />
       </Copy>
 
       <div className={`container ${styles.inner}`}>
@@ -168,32 +168,19 @@ export default function FAQ() {
         </div>
 
         <div className={styles.list}>
-          {ITEMS.map((item) => (
-            <div key={item.question} className={styles.item}>
-              <div className={`${styles.row} ${styles.questionSlot}`}>
-                <div className={`${styles.message} ${styles.question}`}>
-                  <div className={styles.typing} aria-hidden="true">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                  <div className={styles.content}>
-                    <p>{item.question}</p>
-                  </div>
+          {ITEMS.map((item, index) => (
+            <div key={index} className={styles.row}>
+              <div className={styles.message}>
+                <div className={styles.typing}>
+                  <div className={styles.typingDot} />
+                  <div className={styles.typingDot} />
+                  <div className={styles.typingDot} />
                 </div>
-              </div>
-              <div className={`${styles.row} ${styles.answerSlot}`}>
-                <div className={`${styles.message} ${styles.answer}`}>
-                  <div className={styles.typing} aria-hidden="true">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                  <div className={styles.content}>
-                    {item.answer.map((line) => (
-                      <p key={line}>{line}</p>
-                    ))}
-                  </div>
+                <div className={styles.content}>
+                  <p className="mono sm">{item.question}</p>
+                  {item.answer.map((paragraph, pIndex) => (
+                    <p key={pIndex}>{paragraph}</p>
+                  ))}
                 </div>
               </div>
             </div>

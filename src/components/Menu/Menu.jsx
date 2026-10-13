@@ -287,7 +287,7 @@ export default function Menu() {
           <Link
             href="/"
             className={styles.logo}
-            aria-label="Tessera — home"
+            aria-label="RND Financials — home"
             onClick={() => handleLinkClick("/")}
           >
             <Logo />

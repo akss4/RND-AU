@@ -1,7 +1,9 @@
 {
-  "name": "tessera-labs",
+  "name": "rnd-financials",
   "version": "0.1.0",
   "private": true,
+  "author": "akss4",
+  "description": "RND Financials — Melbourne-based mortgage brokerage",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -15,23 +15,23 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const ITEMS = [
   {
-    title: "The Edinburgh lab that breaks a model before it trusts it",
+    title: "How Melbourne home buyers are navigating shifting interest rates",
     image: "/images/journal/article-1.jpg",
   },
   {
-    title: "Why Tessera spends more time on evaluation than training",
+    title: "Why RND Financials prioritises borrower strategy over simple rate comparisons",
     image: "/images/journal/article-2.jpg",
   },
   {
-    title: "A research group that will not ship what it cannot explain",
+    title: "Fixed vs variable: structuring your loan for long-term financial flexibility",
     image: "/images/journal/article-3.jpg",
   },
   {
-    title: "What one lab found when the benchmark was far too clean",
+    title: "What property investors need to know about equity and loan restructuring",
     image: "/images/journal/article-4.jpg",
   },
   {
-    title: "Measuring alignment after a model enters production use",
+    title: "Commercial and asset finance: securing growth capital for Australian businesses",
     image: "/images/journal/article-5.jpg",
   },
 ];
