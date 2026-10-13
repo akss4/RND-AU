@@ -24,6 +24,7 @@ gsap.registerPlugin(useGSAP, SplitText);
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/home-loans", label: "Home Loans" },
+  { href: "/commercial-loans", label: "Commercial Loans" },
   { href: "/about", label: "About Us" },
   { href: "/work", label: "Work" },
   { href: "/firm", label: "Inside the Firm" },
@@ -333,7 +334,9 @@ export default function Menu() {
         </nav>
 
         <Link href="/contact" className={styles.contact}>
-          <p className={`mono sm ${styles.contactIndex} ${styles.split}`}>07</p>
+          <p className={`mono sm ${styles.contactIndex} ${styles.split}`}>
+            {String(NAV_LINKS.length + 1).padStart(2, "0")}
+          </p>
           <div className={styles.contactBody}>
             <h4 className={`${styles.contactTitle} ${styles.split}`}>
               Let&apos;s Talk
