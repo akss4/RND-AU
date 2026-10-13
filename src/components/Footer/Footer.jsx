@@ -4,7 +4,6 @@ import styles from "./Footer.module.css";
 
 import { useRef } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
@@ -17,7 +16,6 @@ gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 const LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/work", label: "Work" },
   { href: "/firm", label: "Inside the Firm" },
   { href: "/partnerships", label: "Partnerships" },
   { href: "/journal", label: "Journal" },
@@ -34,12 +32,10 @@ const PARALLAX_EASE = 0.05;
 const PARALLAX_SCALE = 1 + (PARALLAX_STRENGTH * 2) / 200;
 
 export default function Footer() {
-  const pathname = usePathname();
   const rootRef = useRef(null);
 
   useGSAP(
     () => {
-      if (pathname === "/work") return;
       const footer = rootRef.current;
       if (!footer) return;
       const hands = gsap.utils.toArray(`.${styles.footerHand}`);
@@ -186,15 +182,11 @@ export default function Footer() {
         splits.forEach((split) => split.revert());
       };
     },
-    { scope: rootRef, dependencies: [pathname] },
+    { scope: rootRef, dependencies: [] },
   );
 
   return (
-    <footer
-      className={`${styles.footer}${pathname === "/work" ? ` ${styles.hidden}` : ""}`}
-      ref={rootRef}
-      aria-hidden={pathname === "/work"}
-    >
+    <footer className={styles.footer} ref={rootRef}>
       <div className={styles.footerHands} aria-hidden="true">
         {HANDS.map(({ src, side }) => (
           <div

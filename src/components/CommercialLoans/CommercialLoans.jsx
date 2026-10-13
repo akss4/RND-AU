@@ -179,7 +179,7 @@ export default function CommercialLoans() {
               <div className={styles.imageCard}>
                 <div className={styles.image}>
                   <img
-                    src={prod.image || "/images/work/grounded-decoder.jpg"}
+                    src={prod.image || "/images/loans/grounded-decoder.jpg"}
                     alt={prod.name}
                   />
                 </div>

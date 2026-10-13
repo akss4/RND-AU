@@ -15,7 +15,7 @@ export const COMMERCIAL_LOAN_PRODUCTS = [
     slug: "commercial-property-finance",
     index: "01",
     icon: "WorkspaceIcon",
-    image: "/images/work/grounded-decoder.jpg",
+    image: "/images/loans/grounded-decoder.jpg",
     summary:
       "Commercial property finance provides funding options for eligible businesses and investors purchasing or refinancing commercial real estate, including offices, warehouses, industrial premises and retail properties.",
     paragraphs: [
@@ -32,7 +32,7 @@ export const COMMERCIAL_LOAN_PRODUCTS = [
     slug: "commercial-property-investment-loans",
     index: "02",
     icon: "ChartIcon",
-    image: "/images/work/redline-eval.jpg",
+    image: "/images/loans/redline-eval.jpg",
     summary:
       "Commercial property investment loans are intended to finance eligible commercial real estate purchased for investment purposes, including income-producing warehouses, offices, and retail shops.",
     paragraphs: [
@@ -50,7 +50,7 @@ export const COMMERCIAL_LOAN_PRODUCTS = [
     slug: "commercial-property-refinancing",
     index: "03",
     icon: "SlidersIcon",
-    image: "/images/work/drift-monitor.jpg",
+    image: "/images/loans/drift-monitor.jpg",
     summary:
       "Commercial property refinancing involves reviewing and potentially replacing an existing commercial mortgage to review borrowing costs, repayment arrangements, or loan structures.",
     paragraphs: [
@@ -68,7 +68,7 @@ export const COMMERCIAL_LOAN_PRODUCTS = [
     slug: "commercial-construction-loans",
     index: "04",
     icon: "LayersIcon",
-    image: "/images/work/sparse-recall.jpg",
+    image: "/images/loans/sparse-recall.jpg",
     summary:
       "Commercial construction loans are designed to provide staged funding for eligible construction projects involving warehouses, retail buildings, offices, and industrial facilities.",
     paragraphs: [

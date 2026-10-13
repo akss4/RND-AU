@@ -27,7 +27,6 @@ const NAV_LINKS = [
   { href: "/commercial-loans", label: "Commercial Loans" },
   { href: "/business-loans", label: "Business Loans" },
   { href: "/about", label: "About Us" },
-  { href: "/work", label: "Work" },
   { href: "/firm", label: "Inside the Firm" },
   { href: "/partnerships", label: "Partnerships" },
   { href: "/journal", label: "Journal" },

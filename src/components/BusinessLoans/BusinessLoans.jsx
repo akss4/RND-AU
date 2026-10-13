@@ -179,7 +179,7 @@ export default function BusinessLoans() {
               <div className={styles.imageCard}>
                 <div className={styles.image}>
                   <img
-                    src={prod.image || "/images/work/latent-router.jpg"}
+                    src={prod.image || "/images/loans/latent-router.jpg"}
                     alt={prod.name}
                   />
                 </div>

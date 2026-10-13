@@ -24,7 +24,6 @@ const PAGE_LABELS = {
   "/commercial-loans": "Commercial Loans",
   "/business-loans": "Business Loans",
   "/about": "About Us",
-  "/work": "Work",
   "/research": "Loan Solutions",
   "/firm": "Inside the Firm",
   "/partnerships": "Partnerships",

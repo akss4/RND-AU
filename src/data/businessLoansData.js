@@ -15,7 +15,7 @@ export const BUSINESS_LOAN_PRODUCTS = [
     slug: "secured-business-loans",
     index: "01",
     icon: "WorkspaceIcon",
-    image: "/images/work/latent-router.jpg",
+    image: "/images/loans/latent-router.jpg",
     summary:
       "Secured business loans provide financing for eligible businesses where acceptable property or other assets are offered as security for the borrowing, supporting working capital, expansion, and commercial growth.",
     paragraphs: [
