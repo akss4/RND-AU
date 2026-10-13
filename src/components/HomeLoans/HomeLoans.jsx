@@ -235,7 +235,7 @@ export default function HomeLoans() {
           </p>
 
           <div className={styles.finalCtaButtonWrap}>
-            <Button variant="primary" href="/contact?service=Home+Loans">
+            <Button variant="accent" href="/contact?service=Home+Loans">
               Contact Us
             </Button>
           </div>
