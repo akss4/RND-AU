@@ -22,6 +22,7 @@ const PAGE_LABELS = {
   "/": "Home",
   "/home-loans": "Home Loans",
   "/commercial-loans": "Commercial Loans",
+  "/business-loans": "Business Loans",
   "/about": "About Us",
   "/work": "Work",
   "/research": "Loan Solutions",
