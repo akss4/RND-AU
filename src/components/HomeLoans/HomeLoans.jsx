@@ -65,7 +65,6 @@ export default function HomeLoans() {
       <section className={styles.overviewSection}>
         <div className={styles.overviewBg} aria-hidden="true">
           <img src="/images/home/statement.jpg" alt="" />
-          <div className={styles.overviewOverlay} />
         </div>
 
         <Copy variant="flicker">

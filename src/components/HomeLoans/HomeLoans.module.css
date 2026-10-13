@@ -54,19 +54,6 @@
   object-position: center;
 }
 
-.overviewOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(245, 243, 239, 0.84) 0%,
-    rgba(245, 243, 239, 0.74) 40%,
-    rgba(245, 243, 239, 0.90) 100%
-  );
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-}
-
 .overviewContent {
   position: relative;
   z-index: 1;
@@ -94,9 +81,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 2.25rem 2rem;
-  background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: var(--base-100);
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
