@@ -32,6 +32,27 @@ const PAGE_LABELS = {
 
 function resolvePageLabel(path) {
   if (!path) return "Home";
+
+  // Check for enquiry search query, e.g. /contact?service=First%20Home%20Buyer%20Loans
+  try {
+    const url = new URL(path, "http://localhost");
+    const service = url.searchParams.get("service");
+    if (service) {
+      return `Contact - ${service}`;
+    }
+    path = url.pathname;
+  } catch {
+    const [pathname, search] = path.split("?");
+    if (search) {
+      const params = new URLSearchParams(search);
+      const service = params.get("service");
+      if (service) {
+        return `Contact - ${service}`;
+      }
+    }
+    path = pathname || path;
+  }
+
   const clean = path.replace(/\/+$/, "") || "/";
   if (PAGE_LABELS[clean]) return PAGE_LABELS[clean];
   if (PAGE_LABELS[path]) return PAGE_LABELS[path];
